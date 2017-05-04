@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+/**
+ *
+ * Global CSS
+ *
+ **/
+
+
+/** Font Face **/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf') format('truetype'); }
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/MaterialIcons-Regular.ttf') format('truetype'),
+         url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+         url('../fonts/MaterialIcons-Regular.woff2') format('woff2'); }
+
+
+/** Material Icons **/
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/** Base Layout Styles **/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif }
+
+.form-group {
+    margin-bottom: -16px;}
+
+.ufi-step {
+    width: auto;
+    height: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.ufi-step .step__list {
+    margin: 0;
+    padding: 0; }
+
+.ufi-step .step__list--item {
+    display: inline;
+    float: left;
+    width: 25%;
+    height: 8px;
+    -webkit-box-shadow: 0 -5px 0 5px #fff;
+    -moz-box-shadow: 0 -5px 0 5px #fff;
+    box-shadow: 0 -5px 0 5px #fff;
+    background-color: #fff; }
+
+.ufi-step .step__list--item .list__item--active,
+.ufi-step .step__list--item .list__item--current,
+.ufi-step .step__list--item .list__item--default {
+    display: block;
+    height: 100%; }
+
+.ufi-step .step__list--item:last-child {
+    margin-right: 0; }
+
+.list__item--active {
+    background-color: #1e88e5; }
+
+.list__item--current {
+    background-color: #1565c0; }
+
+.list__item--default {
+    background-color: #e0e0e0; }
+
+.ufi-wrapper {
+    margin: 0; }
+
+.ufi-subheader__title {
+    font-family: Roboto;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    height: 36px;
+    padding-top: 12px; }
+
+.ufi-body__form {
+    margin: 16px 16px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;}
+
+.ufi-body__form .ufi-body__form--element {
+    margin: 24px 0 0; }
+
+.ufi-body__form--inline {
+    width: 50%;
+    display: inline-block;
+    margin: 16px 0 0; }
+
+.ufi-body__form--inline > input[type="radio"] {
+    display: none;
+}
+.ufi-body__form--inline > input[type="radio"] + label::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 10px;
+    border: 2px solid #009688;
+    position: relative;
+    top: 4px;
+}
+.ufi-body__form--inline input[type="radio"]:checked + label::before {
+    background-color: #009688; }
+
+.ufi-body__form .ufi-body__form--element > input[type="text"],
+.ufi-body__form .ufi-body__form--element > input[type="email"],
+.ufi-body__form .ufi-body__form--element > input[type="number"],
+.ufi-body__form .ufi-body__form--element > input[type="date"] {
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    padding: 8px 0; }
+
+.ufi-body__form .ufi-body__form--element > input[type="text"]:focus,
+.ufi-body__form .ufi-body__form--element > input[type="email"]:focus,
+.ufi-body__form .ufi-body__form--element > input[type="number"]:focus,
+.ufi-body__form .ufi-body__form--element > input[type="date"]:focus {
+    outline: none; }
+
+.form__element--back {
+    width: 100%;}
+
+.form__element--submit {
+    width: 100%; }
+
+.ufi-button--submit,
+.ufi-button--back {
+    border: none;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    font-size: 16px;
+    font-weight: inherit;
+    position: relative;
+    z-index: 1;
+    height: 46px;
+    line-height: 36px;
+    width: 100%;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase; }
+
+.ufi-button--submit {
+    background-color: #2ecc71;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+
+.ufi-button--back {
+    background-color: #fff;
+    color: #2ecc71;
+    margin-top: 16px;
+    -webkit-box-shadow: 0 0px 0px 1px rgba(0,170,83, 0.3);
+    -moz-box-shadow: 0 0px 0px 1px rgba(0,170,83, 0.3);
+    box-shadow: 0 0px 0px 1px rgba(0,170,83, 0.3); }
+
+.ufi-button--submit:active,
+.ufi-button--back:active {
+    opacity: .85; }
+
+.ufi-body__form--element {
+    position: relative; }
+
+.ufi-body__form--element > label,
+.ufi-body__form--element > span {
+    display: block;
+    width: 100%; }
+
+.ufi-body__form--element > label {
+    color: #2ecc71; }
+
+.ufi-body__form--element input,
+.ufi-body__form--element select,
+.ufi-body__form--element textarea {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+.ufi-body__form--element > select,
+.ufi-body__form--element > input[type="date"] {
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #666; }
+
+.ufi-body__form--element > select option {
+    font-size: 14px; }
+
+.ufi-body__form--element > select:focus {
+    outline: none; }
+
+.ufi-body__form--element i.caret {
+    position: absolute;
+    right: 2px;
+    top: 2.4rem;
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666;
+    z-index: 2; }
+
+.ufi-field--required {
+    color: #E91E63 }
+
+.ufi-subtitle--success {
+    font-family: Roboto;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 27px;
+    color: #2ecc71 }
+
+.ufi-list-group {
+    padding: 0 16px;
+    list-style: none;}
+
+.ufi-list__item.left  {
+    float: left;
+    width: 60%; }
+
+.ufi-list__item.right  {
+    float: right;
+    text-align: right;
+    width: 40%; }
+
+.ufi-list__item.success {
+    color: #2ecc71; }
+
+.ufi-body__footer-text {
+    margin: 0 16px auto; }
+
+
+/** Helps **/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.label__info {
+    width: 100%;
+    height: auto; }
+
+.label__info .info--error {
+    position: relative;
+    font-size: 18px;
+    top: 4px;
+    color: #ea5757; }
+
+/** Override CSS **/
+
+.validation-error {
+    color: #ea5757;
+    margin: 5px 0;
+    display: inline-block; }
+
+.form-group.required label:after {
+    content: ' *';
+    color: #ea5757;
+}
+
+.tooltip__custom .__react_component_tooltip {
+    left: 13px !important;
+    right: 73px !important; }
+
+.__react_component_tooltip {
+    left: 118px !important;
+    right: 10px !important;
+    padding: 8px 14px !important;
+    font-size: 14px !important;
+    line-height: 21px !important; }
+
+.__react_component_tooltip.place-bottom {
+    margin-top: 24px !important;}

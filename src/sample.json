@@ -1,0 +1,285 @@
+Url :
+	Method : get
+	Response:
+{
+  "status": "SUCCESS",
+  "message": null,
+  "payload": {
+    "listOccupation": [
+      {
+        "code": "02",
+        "name": "ABRI"
+      },
+      {
+        "code": "03",
+        "name": "PENGACARA"
+      },
+      {
+        "code": "04",
+        "name": "PEGAWAI SWASTA"
+      },
+      {
+        "code": "05",
+        "name": "PEGAWAI NEGERI"
+      },
+      {
+        "code": "07",
+        "name": "IBU RUMAH TANGGA"
+      },
+      {
+        "code": "08",
+        "name": "PETANI"
+      },
+      {
+        "code": "09",
+        "name": "NELAYAN"
+      },
+      {
+        "code": "10",
+        "name": "SENIMAN"
+      },
+      {
+        "code": "11",
+        "name": "PENSIUNAN/PURNAWIRAWAN"
+      },
+      {
+        "code": "12",
+        "name": "PELAYARAN/PELAUT"
+      },
+      {
+        "code": "13",
+        "name": "GURU/PENDIDIKAN"
+      },
+      {
+        "code": "14",
+        "name": "JASA"
+      },
+      {
+        "code": "15",
+        "name": "DOKTER/BIDAN/MANTRI"
+      },
+      {
+        "code": "16",
+        "name": "OJEK MOTOR"
+      },
+      {
+        "code": "17",
+        "name": "SOPIR"
+      },
+      {
+        "code": "18",
+        "name": "PETERNAK"
+      },
+      {
+        "code": "19",
+        "name": "PELAJAR/MAHASISWA"
+      },
+      {
+        "code": "20",
+        "name": "BURUH/PRT"
+      },
+      {
+        "code": "21",
+        "name": "PENGRAJIN TANGAN"
+      },
+      {
+        "code": "22",
+        "name": "LAIN-LAIN"
+      },
+      {
+        "code": "24",
+        "name": "PRODUKSI"
+      },
+      {
+        "code": "23",
+        "name": "PEDAGANG"
+      },
+      {
+        "code": "26",
+        "name": "SEWA/RENT"
+      },
+      {
+        "code": "27",
+        "name": "TRANSPORTASI & KOMUNIKASI"
+      },
+      {
+        "code": "28",
+        "name": "HIBURAN"
+      },
+      {
+        "code": "29",
+        "name": "PENDIDIKAN NON FORMAL"
+      },
+      {
+        "code": "30",
+        "name": "HOTEL"
+      },
+      {
+        "code": "31",
+        "name": "PERANGKAT DESA"
+      },
+      {
+        "code": "32",
+        "name": "POLISI"
+      },
+      {
+        "code": "33",
+        "name": "ATLET"
+      },
+      {
+        "code": "34",
+        "name": "PENGOBATAN ALTERNATIF"
+      }
+    ]
+  }
+}
+
+
+2. url:
+Method: post
+Request:
+{
+	"idNumber":"2321rd12ed213123"
+}
+
+Response:
+{
+  "status": "SUCCESS",
+  "message": null,
+  "payload": {
+    "userId": 12254,
+    "agentId": 3181,
+    "customerId": 12605,
+    "fullname": "yan adhi wiranata2",
+    "email": "yanadhiwiranata@gmail.com",
+    "handphoneNumber": "08561992272",
+    "gender": "M",
+    "occupation": "PENGACARA",
+    "idNumber": "2321rd12ed213123",
+    "birthPlace": "jakarta",
+    "birthDate": "30051986000000",
+    "maritalStatus": "M",
+    "idStateCode": "31",
+    "idStateName": "DKI JAKARTA",
+    "idCityCode": "3171",
+    "idCityName": "KODYA JAKARTA SELATAN",
+    "idZipCode": "12550",
+    "idAddress": "jl harsono dalam"
+  }
+}
+
+
+3. url:
+Method: post
+Request:
+{
+	"userId":12254,
+	"agentId":3181,
+	"customerId":12605,
+	"token":"c7c81089-f4a0-4700-8835-d0b269cf8705",
+	"collateral":"DEFAULT",
+	"collateralNumber":"collateralNumber",
+	"totalLoan":1000000,
+	"loanPeriod":12,
+	"idNumber":"idNumber",
+	"contractNumber":"contractNumber",
+	"fullname":"fullName",
+	"handphoneNumber":"08561992272",
+	"email":"yanadhiwiranata@gmail,com",
+	"birthPlace":"Jakarta",
+	"birthDate":"12011992000000",
+	"gender":"MALE",
+	"occupation":"ABRI",
+	"maritalStatus":"S",
+	"biologicalMotherName":"motherName",
+	"stateCode":"31",
+	"cityCode":"3173",
+	"coverArea":"coverArea",
+	"network":"network",
+	"zipCode":"12550",
+	"address":"JL. Harsono dalam no 4d",
+	"visitTimeStamp":"PAGI"
+}
+
+Response:
+{
+  "status": "SUCCESS",
+  "message": null,
+  "payload": {
+    "orderNumber": 13714
+  }
+}
+
+
+4: url:dev-micro.mentimun.co.id/ufi/ufi/scheduler/rekapOrderDaily
+Method:post
+Request:
+{
+	"token":"cuj1c3um23rn32yrvb2389yvm23rc23",
+	"date":"2017-02-15"
+}
+
+5. url:dev.mentimun.co.id/rest-api/orderCustomer/product/history
+Method:post
+request :
+{
+	"id":12605,
+	"customerId":12605,
+	"userId":12254,
+	"token":"c7c81089-f4a0-4700-8835-d0b269cf8705"
+}
+Response:
+{
+  "responseMessage": null,
+  "responseStatus": 1,
+  "listOrders": [
+    {
+      "dateFormatUtil": null,
+      "orderId": 83663,
+      "orderNumber": "13648",
+      "orderDate": "16022017000000",
+      "agentId": 3181,
+      "customerId": 12605,
+      "customerName": "fullName",
+      "status": "Order Diterima",
+      "paymentChannel": "Virtual Account",
+      "flagFifCredit": false,
+      "flagCredit": false,
+      "fifMembershipStatus": null,
+      "virtualAccount": null,
+      "total": 1000000,
+      "financingEcosystemId": 0,
+      "expirationDate": null,
+      "isUrgent": null,
+      "expired": null,
+      "validRemainingTime": null,
+      "timeNow": null
+    }
+    }
+  ],
+  "listOrderTifa": [],
+  "listOrderUfi": [
+    {
+      "dateFormatUtil": null,
+      "orderId": 83663,
+      "orderNumber": "13648",
+      "orderDate": "16022017000000",
+      "agentId": 3181,
+      "customerId": 12605,
+      "customerName": "fullName",
+      "status": "Order Diterima",
+      "paymentChannel": "Virtual Account",
+      "flagFifCredit": false,
+      "flagCredit": false,
+      "fifMembershipStatus": null,
+      "virtualAccount": null,
+      "total": 1000000,
+      "financingEcosystemId": 0,
+      "expirationDate": null,
+      "isUrgent": null,
+      "expired": null,
+      "validRemainingTime": null,
+      "timeNow": null
+    }
+  ]
+}

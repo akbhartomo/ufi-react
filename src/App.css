@@ -1,0 +1,49 @@
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group.required label:after {
+  content: ' *';
+  color: red;
+}
+
+.form-group label {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 5px;
+  color: #2ecc71;
+}
+
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group input[type='number'],
+.form-group input[type='password'],
+.form-group select {
+  border: none;
+  border-bottom: 1px solid #666;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  margin: 8px 0;
+  padding: 8px 0;
+  outline: none;
+}
+
+.validation-error {
+  color: red;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.buttons button {
+  margin-left: 10px;
+}
+
+.buttons button:first-child {
+  margin-left: 0;
+}
